@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" prefHeight="241.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.szt.Controller">
+   <center>
+      <VBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Label fx:id="vNameLabel" text="Nincs fájl kiválasztva" />
+            <Button fx:id="rotateButton" disable="true" mnemonicParsing="false" onAction="#setRotatingAngle" text="Videó elforgatása" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="239.0">
+               <children>
+                  <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.08" visible="false" />
+                  <Label fx:id="progressLabel" text="0%" visible="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="31.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="videoButton" mnemonicParsing="false" onAction="#chooseVideo" text="Videó kiválasztása" />
+            <Button fx:id="startButton" disable="true" mnemonicParsing="false" onAction="#startProcessing" text="Feldolgozás" />
+         </children>
+         <opaqueInsets>
+            <Insets right="10.0" />
+         </opaqueInsets>
+      </HBox>
+   </top>
+</BorderPane>
